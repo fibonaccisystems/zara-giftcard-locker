@@ -4,47 +4,168 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zara 500€ Gutschein Locker</title>
-  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Link to Google Fonts for better typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Basic reset and body styling */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1; /* Soft light background */
+      font-family: 'Poppins', sans-serif; /* Elegant and modern font */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Locker Container */
+    #lockerWrapper {
+      width: 90%;
+      max-width: 600px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+    }
+
+    /* Heading */
+    #lockerWrapper h1 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    /* Description Text */
+    #lockerWrapper p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    /* Offer Links */
+    .offers {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .offer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .offer:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .offer img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 8px;
+    }
+
+    .offer a {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .offer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Complete Message */
+    #completeMessage {
+      display: none;
+      margin-top: 20px;
+      font-size: 16px;
+      color: #2ecc71;
+    }
+
+    /* Button Styling */
+    #redirectButton {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #redirectButton:hover {
+      background-color: #2980b9;
+    }
+
+  </style>
 </head>
+
 <body>
-  <div id="scratchCardContainer">
-    <canvas id="scratchCanvas"></canvas>
-    <div id="hiddenContent">
-      <h1>🎉 Glückwunsch! Dein 500€ Zara-Gutschein wartet auf dich!</h1>
-      <p>Um deinen Gutschein zu erhalten, wähle bitte <b>1–2 der folgenden Angebote</b> aus und schließe sie ab:</p>
-      
-      <div class="offers">
-        <!-- Offer 1 -->
-        <div class="offer">
-          <img src="https://via.placeholder.com/300x150" alt="Gewinne LUSH-Produkte">
-          <a href="https://www.totaltr4ffic.com/41LGZKT/2KPFN6F6/" class="offer-link" target="_blank">
-            Gewinne LUSH-Produkte im Wert von 200 Euro!
-          </a>
-        </div>
-
-        <!-- Offer 2 -->
-        <div class="offer">
-          <img src="https://via.placeholder.com/300x150" alt="Gratis H&M Gutschein">
-          <a href="https://www.totaltr4ffic.com/41LGZKT/2KPH335R/" class="offer-link" target="_blank">
-            Dein Gratis H&M Gutschein im Wert von 500€!
-          </a>
-        </div>
-
-        <!-- Offer 3 -->
-        <div class="offer">
-          <img src="https://via.placeholder.com/300x150" alt="Lindt-Schokoladenpaket">
-          <a href="https://www.totaltr4ffic.com/41LGZKT/2HJKQ7D7/" class="offer-link" target="_blank">
-            Erhalte ein Lindt-Schokoladenpaket im Wert von 100€!
-          </a>
-        </div>
+  <div id="lockerWrapper">
+    <h1>🎉 Glückwunsch! Dein 500€ Zara-Gutschein wartet auf dich!</h1>
+    <p>Um deinen Gutschein zu erhalten, wähle bitte <b>1–2 der folgenden Angebote</b> aus und schließe sie ab:</p>
+    
+    <div class="offers">
+      <!-- Offer 1 -->
+      <div class="offer">
+        <img src="https://via.placeholder.com/300x150" alt="Gewinne LUSH-Produkte">
+        <a href="https://www.totaltr4ffic.com/41LGZKT/2KPFN6F6/" target="_blank">
+          Gewinne LUSH-Produkte im Wert von 200 Euro!
+        </a>
       </div>
-      
-      <div id="completeMessage" style="display: none;">
-        <p>✅ Du hast die erforderlichen Angebote abgeschlossen!</p>
-        <button id="redirectButton">Weiter zu deinem Zara-Gutschein</button>
+
+      <!-- Offer 2 -->
+      <div class="offer">
+        <img src="https://via.placeholder.com/300x150" alt="Gratis H&M Gutschein">
+        <a href="https://www.totaltr4ffic.com/41LGZKT/2KPH335R/" target="_blank">
+          Dein Gratis H&M Gutschein im Wert von 500€!
+        </a>
+      </div>
+
+      <!-- Offer 3 -->
+      <div class="offer">
+        <img src="https://via.placeholder.com/300x150" alt="Lindt-Schokoladenpaket">
+        <a href="https://www.totaltr4ffic.com/41LGZKT/2HJKQ7D7/" target="_blank">
+          Erhalte ein Lindt-Schokoladenpaket im Wert von 100€!
+        </a>
       </div>
     </div>
+
+    <div id="completeMessage">
+      <p>✅ Du hast die erforderlichen Angebote abgeschlossen!</p>
+      <button id="redirectButton" onclick="redirectToFinalPage()">Weiter zu deinem Zara-Gutschein</button>
+    </div>
   </div>
-  <script src="script.js"></script>
+
+  <script>
+    // Example to show the complete message after the user completes the offers
+    function checkOffers() {
+      // Assume user completes 1–2 offers
+      document.getElementById("completeMessage").style.display = "block";
+    }
+
+    function redirectToFinalPage() {
+      // Redirect to the final page (Zara 500€ URL)
+      window.location.href = "https://www.zara.com"; // Replace with the actual link
+    }
+
+    // Call checkOffers when the page is loaded or based on the offers completion
+    window.onload = checkOffers;
+  </script>
 </body>
 </html>
