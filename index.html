@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zara 500€ Gutschein Locker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="scratchCardContainer">
+    <canvas id="scratchCanvas"></canvas>
+    <div id="hiddenContent">
+      <h1>🎉 Glückwunsch! Dein 500€ Zara-Gutschein wartet auf dich!</h1>
+      <p>Um deinen Gutschein zu erhalten, wähle bitte <b>1–2 der folgenden Angebote</b> aus und schließe sie ab:</p>
+      
+      <div class="offers">
+        <!-- Offer 1 -->
+        <div class="offer">
+          <img src="https://via.placeholder.com/300x150" alt="Gewinne LUSH-Produkte">
+          <a href="https://www.totaltr4ffic.com/41LGZKT/2KPFN6F6/" class="offer-link" target="_blank">
+            Gewinne LUSH-Produkte im Wert von 200 Euro!
+          </a>
+        </div>
+
+        <!-- Offer 2 -->
+        <div class="offer">
+          <img src="https://via.placeholder.com/300x150" alt="Gratis H&M Gutschein">
+          <a href="https://www.totaltr4ffic.com/41LGZKT/2KPH335R/" class="offer-link" target="_blank">
+            Dein Gratis H&M Gutschein im Wert von 500€!
+          </a>
+        </div>
+
+        <!-- Offer 3 -->
+        <div class="offer">
+          <img src="https://via.placeholder.com/300x150" alt="Lindt-Schokoladenpaket">
+          <a href="https://www.totaltr4ffic.com/41LGZKT/2HJKQ7D7/" class="offer-link" target="_blank">
+            Erhalte ein Lindt-Schokoladenpaket im Wert von 100€!
+          </a>
+        </div>
+      </div>
+      
+      <div id="completeMessage" style="display: none;">
+        <p>✅ Du hast die erforderlichen Angebote abgeschlossen!</p>
+        <button id="redirectButton">Weiter zu deinem Zara-Gutschein</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
